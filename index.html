@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="styles/a.css" />
+    <script type="text/javascript" src="scripts/init.js" defer="true"></script>
+    <script
+      type="text/javascript"
+      src="scripts/dragmap.js"
+      defer="true"
+    ></script>
+    <script
+      type="text/javascript"
+      src="scripts/console.js"
+      defer="true"
+    ></script>
+    <title>ApexTaisaPoint</title>
+  </head>
+  <body>
+    <div id="cover"></div>
+    <aside class="console" id="console">
+      <img
+        id="cslbtn"
+        src="images/others/wheelchair.png"
+        alt="♿"
+        draggable="false"
+      />
+      <div class="csl">
+        <div class="cslbody">
+          <div class="mapselect">
+            <div class="text">地图:</div>
+            <div class="mapselectbody">
+              <button
+                class="mapselectbtn"
+                data-selectedmap="brokenmoon"
+                onClick="event.cancelBubble = true"
+              >
+                破碎月亮
+              </button>
+              <div class="mapselect-content">
+                <button id="brokenmoon" class="maps">破碎月亮</button>
+                <button id="olympus" class="maps">奥林匹斯</button>
+                <button id="worldsedge" class="maps">世界尽头</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="legendsselect">
+            <div class="text">筛选:</div>
+            <div>
+              <label
+                ><input
+                  id="null"
+                  name="null"
+                  type="checkbox"
+                />无位移传奇</label
+              >
+              <label
+                ><input
+                  id="Valkyrie"
+                  name="Valkyrie"
+                  type="checkbox"
+                />瓦尔基里</label
+              >
+              <label
+                ><input
+                  id="OthersDisplacement"
+                  name="OthersDisplacement"
+                  type="checkbox"
+                />其他未经测试的位移传奇</label
+              >
+            </div>
+          </div>
+          <a
+            href="https://github.com/Inkshow/apextaisapoint/issues"
+            target="_blank"
+          >
+            <button id="issue">issue</button></a
+          >
+        </div>
+      </div>
+    </aside>
+    <div class="map">
+      <img id="mapimage" draggable="false" />
+      <svg id="svg">
+        <g id="svgg"></g>
+        <g id="zbsvgg"></g>
+      </svg>
+    </div>
+    <div id="information"></div>
+  </body>
+</html>

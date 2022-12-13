@@ -1,0 +1,93 @@
+{"taisapoints":[
+  {
+    "id": 0,
+    "coordinates": [1145, 1885],
+    "spciallegend": ["Valkyrie", "OthersDisplacement"],
+    "img": 2,
+    "grade": "D",
+    "fromvideo": ["BV1BU4y1n78y", 78],
+    "time": "2022-12-11"
+  },
+
+  {
+    "id": 2,
+    "coordinates": [939, 1411],
+    "spciallegend": ["Valkyrie", "OthersDisplacement"],
+    "img": 4,
+    "grade": "A",
+    "fromvideo": ["BV1Dr4y1h72g", 347],
+    "time": "2022-12-10"
+  },
+  {
+    "id": 3,
+    "coordinates": [1074, 1818],
+    "spciallegend": null,
+    "img": ,
+    "grade": "B",
+    "fromvideo": ["BV1BU4y1n78y", 45],
+    "time": "2022-12-11"
+  },
+  {
+    "id": 5,
+    "coordinates": [788, 683],
+    "spciallegend": ["Valkyrie", "OthersDisplacement"],
+    "img": 15,
+    "grade": "B",
+    "fromvideo": ["BV1Dr4y1h72g", 196],
+    "time": "2022-12-10"
+  },
+  {
+    "id": 6,
+    "coordinates": [935, 572],
+    "spciallegend": null,
+    "img": 10,
+    "grade": "A",
+    "fromvideo": ["BV1Dr4y1h72g", 265],
+    "time": "2022-12-10"
+  },
+  {
+    "id": 7,
+    "coordinates": [989, 1375],
+    "spciallegend": ["Valkyrie", "OthersDisplacement"],
+    "img": 4,
+    "grade": "A",
+    "fromvideo": ["BV1Dr4y1h72g", 411],
+    "time": "2022-12-10"
+  },
+  {
+    "id": 8,
+    "coordinates": [1426, 951],
+    "spciallegend": ["Valkyrie", "OthersDisplacement"],
+    "img": 3,
+    "grade": "A",
+    "fromvideo": ["BV1Dr4y1h72g", 433],
+    "time": "2022-12-11"
+  },
+  {
+    "id": 9,
+    "coordinates": [1411, 783],
+    "spciallegend": ["Valkyrie", "OthersDisplacement"],
+    "img": 2,
+    "grade": "B",
+    "fromvideo": ["BV1Dr4y1h72g", 672],
+    "time": "2022-12-11"
+  },
+  {
+    "id": 10,
+    "coordinates": [1426, 805],
+    "spciallegend": null,
+    "img": 3,
+    "grade": "A",
+    "fromvideo": ["BV1Dr4y1h72g", 688],
+    "time": "2022-12-11"
+  },
+  {
+    "id": 11,
+    "coordinates": [1338, 924],
+    "spciallegend": null,
+    "img": 6,
+    "grade": "A",
+    "fromvideo": ["BV1Dr4y1h72g", 547],
+    "time": "2022-12-11"
+  }
+],"chargeriflepoints":[]}
