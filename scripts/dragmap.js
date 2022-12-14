@@ -42,7 +42,7 @@ mapimage.addEventListener("load", function () {
   // 滚轮缩放
   wheelZoom();
 });
-mapimage.src = "./images/maps/brokenMoon.jpg";
+mapimage.src = "./images/maps/brokenmoon.png";
 /**
  * 获取图片缩放尺寸
  * @param {number} naturalWidth

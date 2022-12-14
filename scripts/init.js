@@ -61,26 +61,47 @@ window.onload = function () {
               getColor(jsonctt.grade) +
               '"/>';
           } else {
-            htmlcontent +=
-              '<circle class="svgpoint"cx="' +
-              x +
-              '"cy="' +
-              y +
-              '"data-id="' +
-              jsonctt.id +
-              '"data-grade="' +
-              jsonctt.grade +
-              '"data-speciallegend="' +
-              jsonctt.speciallegend +
-              '"data-img="' +
-              jsonctt.img +
-              '"data-fromvideo="' +
-              jsonctt.fromvideo +
-              '"data-time="' +
-              jsonctt.time +
-              '"r="4"stroke="black"stroke-width="2"fill="#' +
-              getColor(jsonctt.grade) +
-              '"/>';
+            if (jsonctt.img === undefined) {
+              htmlcontent +=
+                '<circle class="svgpoint"cx="' +
+                x +
+                '"cy="' +
+                y +
+                '"data-id="' +
+                jsonctt.id +
+                '"data-grade="' +
+                jsonctt.grade +
+                '"data-speciallegend="' +
+                jsonctt.speciallegend +
+                '"data-fromvideo="' +
+                jsonctt.fromvideo +
+                '"data-time="' +
+                jsonctt.time +
+                '"r="4"stroke="black"stroke-width="2"fill="#' +
+                getColor(jsonctt.grade) +
+                '"/>';
+            } else {
+              htmlcontent +=
+                '<circle class="svgpoint"cx="' +
+                x +
+                '"cy="' +
+                y +
+                '"data-id="' +
+                jsonctt.id +
+                '"data-grade="' +
+                jsonctt.grade +
+                '"data-speciallegend="' +
+                jsonctt.speciallegend +
+                '"data-img="' +
+                jsonctt.img +
+                '"data-fromvideo="' +
+                jsonctt.fromvideo +
+                '"data-time="' +
+                jsonctt.time +
+                '"r="4"stroke="black"stroke-width="2"fill="#' +
+                getColor(jsonctt.grade) +
+                '"/>';
+            }
           }
         } else {
           htmlcontent +=
@@ -175,18 +196,32 @@ window.onload = function () {
             imgss.style.width = "100%";
           } else {
             if (svgp.dataset.videop === undefined) {
-              infocontent =
-                '<svg xmlns="http://www.w3.org/2000/svg"width="20"height="20"fill="#f07b65"id="closeinfo"viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg><div id="imgs"><div>' +
-                getimg(svgp.dataset.img, svgp.dataset.id) +
-                '</div></div><div id="from"><div id="video"><iframe id="videoif"src="https://player.bilibili.com/player.html?bvid=' +
-                svgp.dataset.fromvideo.split(",")[0] +
-                "&high_quality=1&danmaku=0&t=" +
-                svgp.dataset.fromvideo.split(",")[1] +
-                '"scrolling="no"border="0"frameborder="no"framespacing="0"allowfullscreen="true"></iframe><div id="details">点位ID：' +
-                svgp.dataset.id +
-                "<br>上传日期：" +
-                svgp.dataset.time +
-                "</div></div></div>";
+              if (svgp.dataset.img === undefined) {
+                infocontent =
+                  '<svg xmlns="http://www.w3.org/2000/svg"width="20"height="20"fill="#f07b65"id="closeinfo"viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg><div id="imgs"><div>' +
+                  '</div></div><div id="from" style="width: 100%;"><div id="video"><iframe id="videoif"src="https://player.bilibili.com/player.html?bvid=' +
+                  svgp.dataset.fromvideo.split(",")[0] +
+                  "&high_quality=1&danmaku=0&t=" +
+                  svgp.dataset.fromvideo.split(",")[1] +
+                  '"scrolling="no"border="0"frameborder="no"framespacing="0"allowfullscreen="true"></iframe><div id="details">点位ID：' +
+                  svgp.dataset.id +
+                  "<br>上传日期：" +
+                  svgp.dataset.time +
+                  "</div></div></div>";
+              } else {
+                infocontent =
+                  '<svg xmlns="http://www.w3.org/2000/svg"width="20"height="20"fill="#f07b65"id="closeinfo"viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg><div id="imgs"><div>' +
+                  getimg(svgp.dataset.img, svgp.dataset.id) +
+                  '</div></div><div id="from"><div id="video"><iframe id="videoif"src="https://player.bilibili.com/player.html?bvid=' +
+                  svgp.dataset.fromvideo.split(",")[0] +
+                  "&high_quality=1&danmaku=0&t=" +
+                  svgp.dataset.fromvideo.split(",")[1] +
+                  '"scrolling="no"border="0"frameborder="no"framespacing="0"allowfullscreen="true"></iframe><div id="details">点位ID：' +
+                  svgp.dataset.id +
+                  "<br>上传日期：" +
+                  svgp.dataset.time +
+                  "</div></div></div>";
+              }
             } else {
               infocontent =
                 '<svg xmlns="http://www.w3.org/2000/svg"width="20"height="20"fill="#f07b65"id="closeinfo"viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg><div id="imgs"><div>' +
@@ -208,7 +243,7 @@ window.onload = function () {
             let b = "";
             for (let i = 1; i <= a; i++) {
               b +=
-                '<img class="img"src="/images/points/' +
+                '<img class="img"src="images/points/' +
                 selectedmap +
                 "/" +
                 c +

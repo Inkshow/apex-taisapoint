@@ -70,6 +70,7 @@ body {
   width: 100%;
   border: none;
   cursor: pointer;
+  pointer-events: none;
 }
 
 .mapselectbtn:hover,
